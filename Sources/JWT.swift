@@ -31,11 +31,14 @@ public struct JWT: Codable {
 
         /// exp
         public let expireDate: Int
+        
+        public let audience = "appstoreconnect-v1"
 
         enum CodingKeys: String, CodingKey {
             case teamID = "iss"
             case issueDate = "iat"
             case expireDate = "exp"
+            case audience = "aud"
         }
     }
 
